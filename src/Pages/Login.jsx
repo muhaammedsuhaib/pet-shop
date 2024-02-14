@@ -17,9 +17,9 @@ const Login = () => {
     const handleSubmit=(e)=>{
         e.preventDefault()
         let email = inputRef.current.email.value
-        let password = Number(inputRef.current.password.value)
+        let password = inputRef.current.password.value
         let dataUser=loginData.find((item)=>item.email===email)
-        if(email==="admin@gmail.com" && password===1234){
+        if(email==="admin@gmail.com" && password==="1234"){
           nav('/allusers')       
         }else if(dataUser && dataUser.password===password){
           setUserData(dataUser)
